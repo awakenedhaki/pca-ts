@@ -22,3 +22,46 @@ The PCA library is not intended for use in data analytics projects. Optimization
 
 See the LICENSE file for license rights and limitations (MIT).
 
+## TODO
+
+- [x] Initialize a git repository
+- [x] Install development dependencies
+  - [x] TypeScript
+  - [x] Jest
+- [ ] Feature: Data Input Handling
+  - [ ] Define test suite
+  - [ ] Read CSV file as 2D array
+- [ ] Feature: Matrix Class
+  - [ ] Define Matrix interface
+  - [ ] Implement Matrix Class
+    - [ ] Define test suite
+    - [ ] Add setters and getters for:
+      - [ ] Rows
+      - [ ] Columns
+      - [ ] Diagonal
+      - [ ] Elements
+    - [ ] Add element-wise operations handling
+    - [ ] Add converters
+      - [ ] 1D array
+      - [ ] 2D array
+    - [ ] Add clone method
+- [ ] Feature: Matrix Factory
+  - [ ] Define test suite
+  - [ ] Generate Identity matrix
+  - [ ] Generate square matrix
+  - [ ] Generate Givens rotation matrix
+  - [ ] Generate matrix from 2D array
+- [ ] Feature: Matrix Operations
+  - [ ] Define test suite
+  - [ ] Implement naive iterative algorithm
+  - [ ] Implement Strassen's algorithm
+- [ ] Feature: Eigenvalue Decomposition
+  - [ ] Define test suite
+  - [ ] Implement Jacobi eigenvalue algorithm
+- [ ] Feature: Covariance Matrix Calculation
+  - [ ] Define test suite
+  - [ ] Calculate covariance from 2D array
+- [ ] Feature: Visualize Principal Components
+  - [ ] Define test suite
+  - [ ] Generate a Scree plot
+  - [ ] Generate PC1 vs PC2 scatter plot
