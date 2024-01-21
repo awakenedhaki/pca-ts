@@ -31,20 +31,20 @@ See the LICENSE file for license rights and limitations (MIT).
 - [ ] Feature: Data Input Handling
   - [ ] Define test suite
   - [ ] Read CSV file as 2D array
-- [ ] Feature: Matrix Class
-  - [ ] Define Matrix interface
-  - [ ] Implement Matrix Class
-    - [ ] Define test suite
-    - [ ] Add setters and getters for:
-      - [ ] Rows
-      - [ ] Columns
-      - [ ] Diagonal
-      - [ ] Elements
-    - [ ] Add element-wise operations handling
-    - [ ] Add converters
-      - [ ] 1D array
-      - [ ] 2D array
-    - [ ] Add clone method
+- [x] Feature: Matrix Class
+  - [x] Define Matrix interface
+  - [x] Implement Matrix Class
+    - [x] Define test suite
+    - [x] Add setters and getters for:
+      - [x] Rows
+      - [x] Columns
+      - [x] Diagonal
+      - [x] Elements
+    - [x] Add element-wise operations handling
+    - [x] Add converters
+      - [x] 1D array
+      - [x] 2D array
+    - [x] Add clone method
 - [ ] Feature: Matrix Factory
   - [ ] Define test suite
   - [ ] Generate Identity matrix
