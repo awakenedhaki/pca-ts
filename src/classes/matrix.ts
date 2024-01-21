@@ -5,8 +5,8 @@ import { checkWithinRange, validateMatrixDimensions } from "../validation";
  * Represents a matrix with basic operations.
  */
 export default class Matrix implements IMatrix {
-    nrows: number;
-    ncols: number;
+    readonly nrows: number;
+    readonly ncols: number;
     data: number[];
 
     /**
