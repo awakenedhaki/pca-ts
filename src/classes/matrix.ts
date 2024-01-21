@@ -1,5 +1,5 @@
 import { IMatrix } from "../interfaces";
-import { checkWithinRange, validateMatrixDimensions } from "../validation";
+import { checkWithinRange, validateMatrixDimensions } from "../utils/validation";
 
 /**
  * Represents a matrix with basic operations.
