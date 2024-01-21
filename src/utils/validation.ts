@@ -1,4 +1,4 @@
-import { NumberRange } from "./types";
+import { NumberRange } from "../types";
 
 /**
  * Checks if a value is within a specified range.
