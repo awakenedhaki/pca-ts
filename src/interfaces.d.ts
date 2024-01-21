@@ -1,8 +1,8 @@
 export interface IMatrix {
     // Properties
-    nrows: number;
-    ncols: number;
-    size: number;
+    readonly nrows: number;
+    readonly ncols: number;
+    readonly size: number;
     data: number[];
 
     // Element-wise operations
