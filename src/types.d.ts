@@ -1,5 +1,5 @@
 export type NumberRange = {
   value: number,
   min: number,
-  max: number
+  max?: number
 }
