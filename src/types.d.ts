@@ -3,3 +3,5 @@ export type NumberRange = {
   min: number,
   max?: number
 }
+
+export type DotProductMethod = "naive" | "strassen";
