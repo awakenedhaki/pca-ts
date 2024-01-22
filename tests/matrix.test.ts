@@ -41,6 +41,12 @@ const nonSquareMatrix: MatrixTestCase = {
 describe("Matrix", () => {
     let matrix: Matrix;
 
+    test("Negative dimensions should throw an error", () => {
+        expect(() => new Matrix(-1, 1, [1])).toThrow();
+        expect(() => new Matrix(1, -1, [1])).toThrow();
+        expect(() => new Matrix(-1, -1, [1])).toThrow();
+    });
+
     test("from2DArray should return the correct Matrix", () => {
         const matrix = Matrix.from2DArray([
             [1, 2, 3],
