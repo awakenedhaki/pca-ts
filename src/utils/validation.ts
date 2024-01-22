@@ -5,11 +5,11 @@ import { NumberRange } from "../types";
  * 
  * @param value - The value to check.
  * @param min - The minimum value of the range.
- * @param max - The maximum value of the range.
+ * @param max - The maximum value of the range (optional).
  * @returns True if the value is within the range, false otherwise.
  */
-export function checkWithinRange(value: number, min: number, max: number) {
-  return value >= min && value <= max
+export function checkWithinRange(value: number, min: number, max?: number) {
+  return max !== undefined ? value >= min && value <= max : value >= min;
 }
 
 /**
