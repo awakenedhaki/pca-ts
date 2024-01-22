@@ -49,7 +49,6 @@ See the LICENSE file for license rights and limitations (MIT).
 - [ ] Feature: Matrix Factory
   - [ ] Define test suite
   - [ ] Generate Identity matrix
-  - [ ] Generate square matrix
   - [ ] Generate Givens rotation matrix
 - [ ] Feature: Matrix Operations
   - [ ] Define test suite
