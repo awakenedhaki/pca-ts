@@ -46,10 +46,10 @@ See the LICENSE file for license rights and limitations (MIT).
       - [x] 2D array
     - [x] Add clone method
     - [x] Generate matrix from 2D array
-- [ ] Feature: Matrix Factory
-  - [ ] Define test suite
-  - [ ] Generate Identity matrix
-  - [ ] Generate Givens rotation matrix
+- [x] Feature: Matrix Factory
+  - [x] Define test suite
+  - [x] Generate Identity matrix
+  - [x] Generate Givens rotation matrix
 - [ ] Feature: Matrix Operations
   - [ ] Define test suite
   - [ ] Implement naive iterative algorithm
