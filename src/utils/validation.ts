@@ -5,33 +5,25 @@ import { NumberRange } from "../types";
  * 
  * @param value - The value to check.
  * @param min - The minimum value of the range.
- * @param max - The maximum value of the range.
+ * @param max - The maximum value of the range (optional).
  * @returns True if the value is within the range, false otherwise.
  */
-export function checkWithinRange(value: number, min: number, max: number) {
-  return value >= min && value <= max
+export function checkWithinRange(value: number, min: number, max?: number) {
+  return max !== undefined ? value >= min && value <= max : value >= min;
 }
 
 /**
- * Validates the dimensions of a matrix.
+ * Validates the dimensions of a matrix based on the provided ranges.
  * 
- * @param row - The row dimension of the matrix.
- * @param column - The column dimension of the matrix.
- * @throws {Error} If either the row or column dimension is not within the specified range.
+ * @param ranges - The ranges to validate against.
+ * @throws Error if any value is not within its corresponding range.
  */
-export function validateMatrixDimensions(row: NumberRange, column: NumberRange) {
-  const correctRow = checkWithinRange(row.value, row.min, row.max);
-  const correctColumn = checkWithinRange(column.value, column.min, column.max);
+export function validateMatrixDimensions(...ranges: NumberRange[]): void {
+  ranges.forEach((range: NumberRange) => {
+    const correct = checkWithinRange(range.value, range.min, range.max);
 
-  if (!correctRow && !correctColumn) {
-    throw new Error(`Row value ${row.value} is not within range [${row.min}, ${row.max}] and column value ${column.value} is not within range [${column.min}, ${column.max}]`);
-  }
-
-  if (!correctRow) {
-    throw new Error(`Row value ${row.value} is not within range [${row.min}, ${row.max}]`);
-  }
-
-  if (!correctColumn) {
-    throw new Error(`Column value ${column.value} is not within range [${column.min}, ${column.max}]`);
-  }
+    if (!correct) {
+      throw new Error(`Value ${range.value} is not within range [${range.min}, ${range.max}]`);
+    }
+  });
 }

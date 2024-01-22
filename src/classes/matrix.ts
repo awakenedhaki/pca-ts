@@ -14,9 +14,13 @@ export default class Matrix implements IMatrix {
      * 
      * @param nrows The number of rows in the matrix.
      * @param ncols The number of columns in the matrix.
-     * @param data The data array representing the matrix elements.
+     * @param data An array containing the matrix data in row-major order.
      */
     constructor(nrows: number, ncols: number, data: number[]) {
+        validateMatrixDimensions(
+            { value: nrows, min: 1 }, 
+            { value: ncols, min: 1 }
+        )
         this.nrows = nrows;
         this.ncols = ncols;
         this.data = data;
