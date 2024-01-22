@@ -5,3 +5,5 @@ export type NumberRange = {
 }
 
 export type DotProductMethod = "naive" | "strassen";
+
+export type BlockMatrices = [Matrix, Matrix, Matrix, Matrix];
