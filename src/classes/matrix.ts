@@ -193,7 +193,7 @@ export default class Matrix implements IMatrix {
      * @returns The one-dimensional array representation of the matrix.
      */
     to1DArray(): number[] {
-        return this.data;
+        return this.data.slice();
     }
 
     /**
