@@ -43,3 +43,13 @@ function arithmeticHandler(operator: (a: number, b: number) => number, ...matric
 export function add(...matrices: Matrix[]): Matrix {
     return arithmeticHandler((a: number, b: number) => a + b, ...matrices);
 }
+
+/**
+ * Subtracts multiple matrices together.
+ * 
+ * @param matrices - The matrices to be subtracted.
+ * @returns The result of subtracting the matrices.
+ */
+export function subtract(...matrices: Matrix[]): Matrix {
+    return arithmeticHandler((a: number, b: number) => a - b, ...matrices);
+}
