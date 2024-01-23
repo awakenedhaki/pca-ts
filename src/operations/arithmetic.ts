@@ -33,3 +33,13 @@ function arithmeticHandler(operator: (a: number, b: number) => number, ...matric
 
     return result
 }
+
+/**
+ * Adds multiple matrices together.
+ * 
+ * @param matrices - The matrices to be added.
+ * @returns The result of adding the matrices.
+ */
+export function add(...matrices: Matrix[]): Matrix {
+    return arithmeticHandler((a: number, b: number) => a + b, ...matrices);
+}
