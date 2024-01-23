@@ -36,6 +36,15 @@ export default class Matrix implements IMatrix {
     }
 
     /**
+     * Gets the dimensions of the matrix.
+     * 
+     * @returns An array containing the number of rows and columns of the matrix.
+     */
+    get shape(): [number, number] {
+        return [this.nrows, this.ncols];
+    }
+
+    /**
      * Retrieves the value at the specified row and column in the matrix.
      * 
      * @param row - The row index.
