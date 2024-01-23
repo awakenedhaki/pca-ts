@@ -1,4 +1,4 @@
-import { NumberRange } from "../types";
+import { IndexRange } from "../types";
 
 /**
  * Checks if a value is within a specified range.
@@ -18,12 +18,12 @@ export function checkWithinRange(value: number, min: number, max?: number) {
  * @param ranges - The ranges to validate against.
  * @throws Error if any value is not within its corresponding range.
  */
-export function validateMatrixDimensions(...ranges: NumberRange[]): void {
-  ranges.forEach((range: NumberRange) => {
-    const correct = checkWithinRange(range.value, range.min, range.max);
+export function validateMatrixDimensions(...ranges: IndexRange[]): void {
+  ranges.forEach((range: IndexRange) => {
+    const correct = checkWithinRange(range.index, range.min, range.max);
 
     if (!correct) {
-      throw new Error(`Value ${range.value} is not within range [${range.min}, ${range.max}]`);
+      throw new Error(`Index ${range.index} is not within range [${range.min}, ${range.max}]`);
     }
   });
 }
