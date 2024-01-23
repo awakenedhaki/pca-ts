@@ -3,6 +3,7 @@ export interface IMatrix {
     readonly nrows: number;
     readonly ncols: number;
     readonly size: number;
+    readonly shape: [number, number];
     data: number[];
 
     // Element-wise operations

@@ -36,6 +36,15 @@ export default class Matrix implements IMatrix {
     }
 
     /**
+     * Gets the dimensions of the matrix.
+     * 
+     * @returns An array containing the number of rows and columns of the matrix.
+     */
+    get shape(): [number, number] {
+        return [this.nrows, this.ncols];
+    }
+
+    /**
      * Retrieves the value at the specified row and column in the matrix.
      * 
      * @param row - The row index.
@@ -230,5 +239,36 @@ export default class Matrix implements IMatrix {
         }
 
         return new Matrix(nrows, ncols, data);
+    }
+
+    /**
+     * Creates a new matrix by combining four block matrices.
+     * 
+     * @param A11 - The top-left block matrix.
+     * @param A12 - The top-right block matrix.
+     * @param A21 - The bottom-left block matrix.
+     * @param A22 - The bottom-right block matrix.
+     * @returns The combined matrix.
+     */
+    static fromBlockMatrices(A11: Matrix, A12: Matrix, A21: Matrix, A22: Matrix): Matrix {
+        const nrows: number = A11.nrows;
+        const ncols: number = A11.ncols;
+        const size: number = A11.size;
+
+        const combinedSize: number = size * size; 
+
+        const data: number[] = Array(size * size).fill(0);
+        const combinedMatrix: Matrix = new Matrix(combinedSize, combinedSize, data);
+
+        for (let row = 0; row <= nrows; row++) {
+            for (let col = 0; col <= ncols; col++) {
+                combinedMatrix.set(row, col, A11.get(row, col));
+                combinedMatrix.set(row, col + size, A12.get(row, col));
+                combinedMatrix.set(row + size, col, A21.get(row, col));
+                combinedMatrix.set(row + size, col + size, A22.get(row, col));
+            }
+        }
+
+        return combinedMatrix;
     }
 }

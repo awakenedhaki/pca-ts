@@ -50,10 +50,10 @@ See the LICENSE file for license rights and limitations (MIT).
   - [x] Define test suite
   - [x] Generate Identity matrix
   - [x] Generate Givens rotation matrix
-- [ ] Feature: Matrix Operations
-  - [ ] Define test suite
-  - [ ] Implement naive iterative algorithm
-  - [ ] Implement Strassen's algorithm
+- [x] Feature: Matrix Operations
+  - [x] Define test suite
+  - [x] Implement naive iterative algorithm
+  - [x] Implement Strassen's algorithm
 - [ ] Feature: Eigenvalue Decomposition
   - [ ] Define test suite
   - [ ] Implement Jacobi eigenvalue algorithm
