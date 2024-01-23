@@ -13,6 +13,17 @@ export function checkWithinRange(value: number, min: number, max?: number) {
 }
 
 /**
+ * Checks if two arrays are equal by comparing their lengths and values at each index.
+ * 
+ * @param arr1 The first array to compare.
+ * @param arr2 The second array to compare.
+ * @returns True if the arrays are equal, false otherwise.
+ */
+export function checkEqualArray(arr1: number[], arr2: number[]): boolean {
+  return arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+}
+
+/**
  * Validates the dimensions of a matrix based on the provided ranges.
  * 
  * @param ranges - The ranges to validate against.
