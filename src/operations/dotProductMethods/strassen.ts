@@ -14,6 +14,15 @@ export default function strassen(A: Matrix, B: Matrix): Matrix {
     if (A.isSquare() && B.isSquare() && A.size <= 4 && B.size <= 4) {
         return naive(A, B);
     }
+
+    if (!A.isSquare()) {
+        A = zeroPadding(A);
+    }
+
+    if (!B.isSquare()) {
+        B = zeroPadding(B);
+    }
+
     // Partition A and B into smaller matrices
     const [A11, A12, A21, A22]: BlockMatrices = partition(A);
     const [B11, B12, B21, B22]: BlockMatrices = partition(B);
@@ -37,6 +46,17 @@ export default function strassen(A: Matrix, B: Matrix): Matrix {
 
     // Combine the quadrants to form the final result
     return Matrix.fromBlockMatrices(C11, C12, C21, C22);
+}
+
+/**
+ * Adds zero padding to a matrix.
+ * 
+ * @param matrix - The matrix to add zero padding to.
+ * @returns The matrix with zero padding.
+ * @throws {Error} If the function is not implemented.
+ */
+function zeroPadding(matrix: Matrix): Matrix {
+    throw new Error("Not implemented.");
 }
 
 /**
