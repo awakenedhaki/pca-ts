@@ -1,5 +1,5 @@
-export type NumberRange = {
-  value: number,
+export type IndexRange = {
+  index: number,
   min: number,
   max?: number
 }

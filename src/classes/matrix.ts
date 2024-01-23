@@ -18,8 +18,8 @@ export default class Matrix implements IMatrix {
      */
     constructor(nrows: number, ncols: number, data: number[]) {
         validateMatrixDimensions(
-            { value: nrows, min: 1 }, 
-            { value: ncols, min: 1 }
+            { index: nrows, min: 1 }, 
+            { index: ncols, min: 1 }
         )
         this.nrows = nrows;
         this.ncols = ncols;
@@ -53,8 +53,8 @@ export default class Matrix implements IMatrix {
      */
     get(row: number, col: number): number {
         validateMatrixDimensions(
-            { value: row, min: 0, max: this.nrows - 1 }, 
-            { value: col, min: 0, max: this.ncols - 1 }
+            { index: row, min: 0, max: this.nrows - 1 }, 
+            { index: col, min: 0, max: this.ncols - 1 }
         );
 
         return this.data[row * this.ncols + col];
@@ -69,8 +69,8 @@ export default class Matrix implements IMatrix {
      */
     set(row: number, col: number, value: number): void {
         validateMatrixDimensions(
-            { value: row, min: 0, max: this.nrows - 1 }, 
-            { value: col, min: 0, max: this.ncols - 1 }
+            { index: row, min: 0, max: this.nrows - 1 }, 
+            { index: col, min: 0, max: this.ncols - 1 }
         );
 
         this.data[row * this.ncols + col] = value;
