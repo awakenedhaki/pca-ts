@@ -27,8 +27,6 @@ export default function strassen(A: Matrix, B: Matrix): Matrix {
     const [A11, A12, A21, A22]: BlockMatrices = partition(A);
     const [B11, B12, B21, B22]: BlockMatrices = partition(B);
 
-    console.log(A11, A12, A21, A22);
-
     // Perform the seven multiplications, recursively using strassen
     const M1: Matrix = strassen(add(A11, A22), add(B11, B22));
     const M2: Matrix = strassen(add(A21, A22), B11);
